@@ -123,8 +123,8 @@ const Services: FC<IServiceProps> = ({ submit, defaultValues }) => {
             </tr>
           </thead>
           <tbody>
-            {selectedServices?.map((pkg) => (
-              <tr className="border-t border-[#3f3f46]">
+            {selectedServices?.map((pkg, index) => (
+              <tr key={index} className="border-t border-[#3f3f46]">
                 <td className="py-3 px-3 flex items-center space-x-3">
                   <img alt="Red car product image" className="w-10 h-10 rounded" height="40" src={pkg.thumbnail} width="40" />
                   <span className="font-semibold text-white text-[13px] leading-tight">

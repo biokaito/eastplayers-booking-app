@@ -96,7 +96,7 @@ const ReviewNSend: FC<IReviewNSendProps> = ({ state, backTo }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {
             state.services?.length > 0 && state.services.map((service, index) => (
-              <ServiceCard item={service} />
+              <ServiceCard item={service} key={index} />
             ))
           }
         </div>

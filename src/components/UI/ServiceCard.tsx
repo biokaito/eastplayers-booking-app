@@ -3,11 +3,12 @@ import { FC } from "react";
 
 interface IServiceCardProps {
   item: Package
+  key?: string | number;
 }
 
-const ServiceCard: FC<IServiceCardProps> = ({ item }) => {
+const ServiceCard: FC<IServiceCardProps> = ({ item, key }) => {
   return (
-    <div className="max-w-sm w-full bg-[#2A2B35] rounded-xl p-5 text-white">
+    <div key={key} className="max-w-sm w-full bg-[#2A2B35] rounded-xl p-5 text-white">
       <div className="flex items-center space-x-4 mb-4">
         <img alt="Close-up image of a white car side mirror and front window" className="w-16 h-16 rounded-lg object-cover flex-shrink-0" height="64" src={item.thumbnail} width="64" />
         <h2 className="font-semibold text-lg leading-6">

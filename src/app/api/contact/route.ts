@@ -31,7 +31,7 @@ const mockDatabase: { contacts: Contact[] } = {
 ]
 }
 
-let contacts: Contact[] = [
+const contacts: Contact[] = [
   ...mockDatabase.contacts
 ]; // Local in-memory "DB"
 
