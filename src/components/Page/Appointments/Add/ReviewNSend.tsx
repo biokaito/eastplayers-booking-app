@@ -93,7 +93,7 @@ const ReviewNSend: FC<IReviewNSendProps> = ({ state, backTo }) => {
           <h3 className="text-white">Services</h3>
           <Button onClick={() => backTo(stepConstants.services)} type='text' className="flex items-center gap-2 font-medium text-[#2E7FF1]">Edit <PencilLine size={20} /> </Button>
         </div>
-        <div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {
             state.services?.length > 0 && state.services.map((service, index) => (
               <ServiceCard item={service} />
